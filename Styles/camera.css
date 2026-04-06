@@ -1,0 +1,22 @@
+.camera-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .camera-card {
+    width: 420px;
+    text-align: center;
+  }
+  
+  .camera-card h3 {
+    margin-bottom: 12px;
+  }
+  
+  .camera-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 20px;
+  }
+  

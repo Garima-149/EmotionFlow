@@ -1,0 +1,113 @@
+/* ===== STUDY PLAN PAGE ===== */
+.study-plan-page {
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  /* ===== MAIN GLASS CARD ===== */
+  .card {
+    width: 100%;
+    max-width: 900px;
+    padding: 36px 40px;
+    border-radius: 26px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+  
+    box-shadow:
+      0 25px 60px rgba(0, 0, 0, 0.35),
+      inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  
+    color: #f8fafc;
+  }
+  
+  /* ===== TITLE ===== */
+  .card h2 {
+    font-size: 45px;
+    font-weight: 800;
+    
+    margin-bottom: -5px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .study-description {
+    font-size: 28px;
+    line-height: 1;
+    color: #f3f4f7;
+    text-align: center;
+    margin-bottom: 26px;
+    max-width: 700px;
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: auto;
+  }
+  
+  /* ===== LIST ===== */
+  .card ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+  }
+  
+  /* ===== LIST ITEMS ===== */
+  .card li {
+    padding: 18px 22px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 500;
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ===== POSITIVE TASKS ===== */
+  .card li:nth-child(1),
+  .card li:nth-child(2) {
+    background: linear-gradient(
+      135deg,
+      rgba(19, 189, 82, 0.55),
+      rgba(3, 81, 55, 0.45)
+    );
+    color: #ecfdf5;
+  }
+  
+  /* ===== NEGATIVE TASKS ===== */
+  .card li:nth-child(3),
+  .card li:nth-child(4) {
+    background: linear-gradient(
+      135deg,
+      rgba(239, 68, 68, 0.55),
+      rgba(106, 5, 5, 0.45)
+    );
+    color: #fff1f2;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 800px) {
+    .card ul {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      padding: 28px;
+    }
+  }
+  
