@@ -1,0 +1,14 @@
+{
+    "name": "emotionflow-backend",
+    "type": "module",
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "axios": "^1.14.0",
+        "canvas": "^3.2.3",
+        "cors": "^2.8.6",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.1",
+        "face-api.js": "^0.22.2",
+        "socket.io": "^4.8.3"
+    }
+}
