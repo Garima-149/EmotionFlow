@@ -12,7 +12,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://your-frontend.onrender.com",
+    origin: "*",
+    credentials:true
   },
 });
 
@@ -149,7 +150,7 @@ switch (parsed.emotion) {
     focusScore = 50;
       }
       
-   await axios.post("https://your-backend.onrender.com/add-record", {
+   await axios.post("https://localhost:5000/add-record", {
   userId,
   mood: parsed.emotion,
   focusScore
@@ -183,7 +184,7 @@ switch (parsed.emotion) {
   });
 });
 
-const PORT = process.env.PORT || 5001;
-server.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
+//const PORT = process.env.PORT || 5001;
+//server.listen(PORT, () => {
+ // console.log(`Server running on ${PORT}`);
+//});
