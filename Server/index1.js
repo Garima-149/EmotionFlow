@@ -1,18 +1,19 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-
+import "./index.js";
+import "./server.js";
 const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://your-frontend.onrender.com", // allow frontend
+  origin: "*", // allow frontend
   credentials: true
 }));
 app.use(express.json());
 
 // ✅ MongoDB Connection
-mongoose.connect("mongodb://127.0.0.1:27017/emotionflow")
+mongoose.connect("mongodb+srv://garimachandra149:Garima149#@emotionflow.mvwgjit.mongodb.net/?appName=EmotionFlow")
 .then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.log("❌ Mongo Error:", err));
 
