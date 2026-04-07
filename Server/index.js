@@ -9,7 +9,7 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://your-frontend.onrender.com",
+  origin: "*",
   credentials: true
 }));
 app.use(express.json());
@@ -82,7 +82,7 @@ app.post("/chat", async (req, res) => {
 // ✅ START SERVER
 
 
-const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
+//const PORT = process.env.PORT || 4000;
+//server.listen(PORT, () => {
+//  console.log(`Server running on ${PORT}`);
+//});
