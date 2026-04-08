@@ -13,7 +13,7 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ MongoDB Connection
-mongoose.connect("mongodb+srv://garimachandra149:Garima149#@emotionflow.mvwgjit.mongodb.net/?appName=EmotionFlow")
+mongoose.connect("mongodb+srv://garimachandra149:Garima1490@emotionflow.mvwgjit.mongodb.net/?appName=EmotionFlow")
 .then(() => console.log("✅ MongoDB Connected"))
 .catch(err => console.log("❌ Mongo Error:", err));
 
