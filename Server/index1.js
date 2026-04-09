@@ -168,7 +168,31 @@ app.post("/chat", async (req, res) => {
 // ================= EMOTION (UNCHANGED) =================
 
 async function analyzeEmotionAndPlan(base64Image) {
-  const prompt = `YOUR SAME PROMPT HERE`; // 👈 keep your original prompt
+  const prompt = `
+You are an AI study assistant.
+
+STRICT RULES:
+- ALWAYS include ALL fields
+- NEVER skip any field
+- NEVER return partial JSON
+
+Tasks:
+1. Detect emotion
+2. Give 1-line recommendation
+3. Give 4-point study plan
+
+Return ONLY valid JSON.
+
+Format:
+{
+  "emotion": "happy | sad | stressed | focused | neutral",
+  "recommendation": "1 line advice (MANDATORY)",
+  "plan": {
+    "do": ["point 1", "point 2"],
+    "avoid": ["point 3", "point 4"]
+  }
+}
+`;
 
   const response = await axios.post(
     `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
@@ -242,7 +266,7 @@ io.on("connection", (socket) => {
       }
 
       await axios.post(
-        `${process.env.BASE_URL}/add-record`,
+        `https://emotion-backend-fmir.onrender.com/add-record`,
         { userId, mood: parsed.emotion, focusScore }
       );
 
