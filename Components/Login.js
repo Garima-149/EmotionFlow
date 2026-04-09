@@ -19,7 +19,7 @@ const [password, setPassword] = useState("");
   const handleLogin = async (e) => {
   e.preventDefault();
 
-  const res = await fetch("https://your-backend.onrender.com/login", {
+  const res = await fetch("https://emotion-backend-fmir.onrender.com/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -48,7 +48,7 @@ const handleGoogleLogin = async () => {
     const user = result.user;
 
     // ✅ Call backend
-    const res = await axios.post("https://your-backend.onrender.com/google-login", {
+    const res = await axios.post("https://emotion-backend-fmir.onrender.com/google-login", {
       email: user.email
     });
 
