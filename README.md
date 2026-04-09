@@ -1,7 +1,7 @@
 #🧠 EmotionFlow – AI Powered Study Assistant
 
 EmotionFlow is a smart web application that detects a user's emotional state using AI and provides a personalized study plan in real-time. It helps learners to stay productive, avoid burnout, and improve focus through adaptive recommendations.
-
+Live Link - https://emotionflow-ph8p.onrender.com/
 ---
 
 ## 🚀 Features
