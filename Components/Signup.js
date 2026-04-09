@@ -16,7 +16,7 @@ const [password, setPassword] = useState("");
      console.log("EVENT:", e);
     e.preventDefault();
     try {
-      const res=await fetch("https://your-backend.onrender.com/signup", {
+      const res=await fetch("https://emotion-backend-fmir.onrender.com/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
