@@ -150,7 +150,7 @@ switch (parsed.emotion) {
     focusScore = 50;
       }
       
-   await axios.post("https://localhost:5000/add-record", {
+   await axios.post("https://emotion-backend-fmir.onrender.com/add-record", {
   userId,
   mood: parsed.emotion,
   focusScore
