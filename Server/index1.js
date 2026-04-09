@@ -4,6 +4,7 @@ import cors from "cors";
 import "./index.js";
 import "./server.js";
 const app = express();
+const server=http.createServer(app);
 
 // ✅ Middleware
 app.use(cors({
@@ -193,6 +194,6 @@ app.get("/records/:userId", async (req, res) => {
 
 // ✅ Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
