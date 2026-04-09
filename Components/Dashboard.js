@@ -5,7 +5,7 @@ import "../Styles/dashboard.css";
 import "../Styles/navbar.css";
 import io from "socket.io-client";
 
-const socket = io("https://your-backend.onrender.com");
+const socket = io("https://emotion-backend-fmir.onrender.com");
 
 export default function Dashboard() {
   const { user } = useContext(AuthContext);
@@ -56,7 +56,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://your-backend.onrender.com/records/${user.id}`)
+      fetch(`https://emotion-backend-fmir.onrender.com/records/${user.id}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
