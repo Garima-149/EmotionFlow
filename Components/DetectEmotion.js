@@ -6,7 +6,7 @@ import "../Styles/global.css";
 import "../Styles/navbar.css";
 import { AuthContext } from "./AuthContext";
 
-const socket = io("https://your-backend.onrender.com");
+const socket = io("https://emotion-backend-fmir.onrender.com");
 
 export default function DetectEmotion() {
   const webcamRef = useRef(null);
